@@ -12,7 +12,7 @@
       "name": "param2",
       "type": "int",
       "bounds": [
-        0,
+        1,
         10
       ]
     },
@@ -37,16 +37,9 @@
   ],
   "samples": [
     {
-      "param1": 0.9975133258849382,
-      "param2": 1,
-      "param3": 4,
-      "param4": "red",
-      "result": 2
-    },
-    {
-      "param1": 0.45270088594406843,
-      "param2": 8,
-      "param3": 1,
+      "param1": 0.123,
+      "param2": 5,
+      "param3": 2,
       "param4": "red",
       "result": 1
     }
