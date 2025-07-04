@@ -1,0 +1,54 @@
+{
+  "parameters": [
+    {
+      "name": "param1",
+      "type": "range",
+      "bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "param2",
+      "type": "int",
+      "bounds": [
+        0,
+        10
+      ]
+    },
+    {
+      "name": "param3",
+      "type": "choice",
+      "values": [
+        1,
+        2,
+        4
+      ],
+      "is_ordered": true
+    },
+    {
+      "name": "param4",
+      "type": "choice",
+      "values": [
+        "red",
+        "green"
+      ]
+    }
+  ],
+  "samples": [
+    {
+      "param1": 0.9975133258849382,
+      "param2": 1,
+      "param3": 4,
+      "param4": "red",
+      "result": 2
+    },
+    {
+      "param1": 0.45270088594406843,
+      "param2": 8,
+      "param3": 1,
+      "param4": "red",
+      "result": 1
+    }
+  ]
+}
