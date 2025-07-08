@@ -65,7 +65,7 @@ pip install -r requirements.txt
 | ------------ | ------------------------------------------------------------- | --------------------- |
 | Continuous   | `{"type": "range", "bounds": [lo, hi]}`                       | `float` bounds        |
 | Integer      | `{"type": "int", "bounds": [lo, hi]}`                         | `int` bounds          |
-| Discrete‑num | `{"type": "choice", "values": [1, 2, 4], "is_ordered": true}` | GP exploits ordering  |
+| Ordered      | `{"type": "choice", "values": [1, 2, 4], "is_ordered": true}` | GP exploits ordering  |
 | Categorical  | `{"type": "choice", "values": ["red", "green"]}`              | One‑hot encoded       |
 
 ---

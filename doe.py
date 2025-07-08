@@ -101,7 +101,7 @@ def bayesopt_batch(
     mll = ExactMarginalLogLikelihood(model.likelihood, model)
     fit_gpytorch_mll(mll)
 
-    sampler = SobolQMCNormalSampler(torch.Size([128]), seed=seed)
+    sampler = SobolQMCNormalSampler(torch.Size([512]), seed=seed)
     acq = qPosteriorStandardDeviation(model, sampler=sampler)
 
     X_batch, _ = optimize_acqf(
@@ -111,6 +111,7 @@ def bayesopt_batch(
         num_restarts=10,
         raw_samples=4096,
         options={"seed": seed},
+        sequential=True,
     )
     return [decode_vector(params, x) for x in X_batch.squeeze(0)]
 
