@@ -72,9 +72,9 @@ pip install -r requirements.txt
 
 ### Command‑line flags
 
-| Flag(s)        | Meaning                               | Default |
-| -------------- | ------------------------------------- | ------- |
-| `file`         | Path to the JSON experiment file      | –       |
-| `--samples`    | Number of new samples to propose      | `1`     |
-| `--noise`      | Noise level for the Gaussian Process  | `1e-6`  |
-| `--seed`       | RNG seed for reproducibility          | `None`  |
+| Flag(s)        | Meaning                                                              | Default |
+| -------------- | -------------------------------------------------------------------- | ------- |
+| `file`         | Path to the JSON experiment file                                     | –       |
+| `--samples`    | Number of new samples to propose                                     | `1`     |
+| `--noise`      | Noise level for the Gaussian Process (in the same units as `result`) | `1e-6`  |
+| `--seed`       | RNG seed for reproducibility                                         | `None`  |

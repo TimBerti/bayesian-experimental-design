@@ -8,6 +8,7 @@ from typing import Dict, List
 
 import torch
 from botorch.acquisition.monte_carlo import qPosteriorStandardDeviation
+from botorch.acquisition.max_value_entropy_search import qMaxValueEntropy
 from botorch.fit import fit_gpytorch_mll
 from botorch.models import SingleTaskGP
 from botorch.optim import optimize_acqf
@@ -102,7 +103,8 @@ def bayesopt_batch(
     fit_gpytorch_mll(mll)
 
     sampler = SobolQMCNormalSampler(torch.Size([512]), seed=seed)
-    acq = qPosteriorStandardDeviation(model, sampler=sampler)
+    acq = qPosteriorStandardDeviation(model=model, sampler=sampler)
+    # acq = qMaxValueEntropy(model, candidate_set=torch.rand(1000, bounds.size(1)))
 
     X_batch, _ = optimize_acqf(
         acq,
